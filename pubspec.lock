@@ -1002,7 +1002,7 @@ packages:
   polygonid_flutter_sdk:
     dependency: "direct main"
     description:
-      path: ".."
+      path: flutter_sdk
       relative: true
     source: path
     version: "2.2.8+1"
