@@ -1,0 +1,3 @@
+/lib/src/common/env.g.dart
+.dart_tool/*
+.idea/*
