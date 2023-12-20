@@ -36,9 +36,10 @@ Future<void> main() async {
   getIt.registerLazySingleton<FlutterSecureStorage>(() => FlutterSecureStorage());
 
   final storage = new FlutterSecureStorage();
-  String? privateKey = await storage.read(key: "PRIVATE_KEY");
+  String? privateKey = await storage.read(key: "PRIVATE_KEY") ?? "";
 
   User user = new User();
+
 
   if (privateKey!.isNotEmpty){
     String did = await PolygonIdSdk.I.identity.getDidIdentifier(privateKey: privateKey, blockchain: "polygon", network: "mumbai");
